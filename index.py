@@ -5,4 +5,6 @@ index = Blueprint("index", __name__, template_folder="templates")
 
 @index.route("/")
 def _index():
-    pass
+    songs = db.find("songs", "all")
+    return render_template("index.html", songs)
+
