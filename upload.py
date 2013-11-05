@@ -5,7 +5,7 @@ from id3reader import Reader
 
 upload = Blueprint("upload", __name__, template_folder="templates")
 
-@upload.route("/")
+@upload.route("/upload/")
 def _upload():
     if request.method == "POST":
         song = request.files['song']
