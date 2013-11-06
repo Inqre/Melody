@@ -42,20 +42,19 @@
         </form>
       </div>
       <button type="file_" class="uploadBtn">Upload</button>
-    </div>
-    <ul>
-      {% for x in songs %}
-      <li class="song" id="{{ x['title'] }}" name="{{ x['url'] }}">
-        {{ x['title'] }}
-        <span class="artist">
-          by 
-          <span class="artistName">
-            {{ x['artist'] }}
+      <ul>
+        {% for x in songs %}
+        <li class="song" id="{{ x['title'] }}" name="{{ x['url'] }}">
+          {{ x['title'] }}
+          <span class="artist">
+            by 
+            <span class="artistName">
+              {{ x['artist'] }}
+            </span>
           </span>
-        </span>
-      </li>
-      {% endfor %}
-    </ul>
+        </li>
+        {% endfor %}
+      </ul>
   </div>
   </div>
   </div>
