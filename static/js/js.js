@@ -62,6 +62,9 @@ $(".song").click( function() {
 $(".uploadBtn").click( function() {
 	$(".songUploadInput").click();
 });
+$(".songUploadInput").change( function() {
+	$(".submitSongAddition").click();	
+});
 
 /* Upload button popup
 
