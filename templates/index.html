@@ -1,79 +1,104 @@
 <html>
-<head>
-<title>Melody</title>
-<script src="../static/jquery.min.js"></script>
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
-<link href="../static/style.css" type="text/css" rel="stylesheet" />
-</head>
-<body>
-<!-- Audio file under me -->
-<audio class="audioFile" preload="auto" src="{{ first['url'] }}"></audio>
-<!-- end of audio file -->
-<div class="container">
-	<div class="leftpane sidebarContainer">
+  <head>
+    <title>
+      Melody
+    </title>
+    <script src="../static/jquery.min.js">
+    </script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="../static/style.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Audio file under me -->
+    <audio class="audioFile" preload="auto" src="{{ first['url'] }}">
+    </audio>
+    <!-- end of audio file -->
+    <div class="container">
+      <div class="leftpane sidebarContainer">
 		<div class="sidebar">
-			<div class="topHeader">
-				<h2>Playlists</h2>
-			</div>
-            <ul>
-                {% for x in playlists %}
-                <li class="playlist">{{ x }}</li>
-                {% endfor %}    
-            </ul>
-		</div>
-	</div>
-	<div class="rightpane contentContainer">
-		<div class="content">
-			<div class="topHeader">
-				<h2>Your Music</h2>
-                <!--<div style="height:0; overflow:hidden;">-->
-                <div>
-                    <form method='post' enctype="multipart/form-data">
-                        <input type="file" class="songUploadInput" name="song" >
-                        <br/>
-                        <input type="submit" value="submit"/>
-                    </form>
-
-				</div>
-				<button type="file_" class="uploadBtn">Upload</button>
-			</div>
-            <ul>
-                {% for x in songs %}
-                <li class="song" id="{{ x['title'] }}" name="{{ x['url'] }}">{{ x['title'] }}<span class="artist">by <span class="artistName">{{ x['artist'] }}</span></span></li>
-                {% endfor %}
-			</ul>
-		</div>
-	</div>
-</div>
-<div class="player">
+          <div class="topHeader">
+            <h2>
+              Playlists
+            </h2>
+          </div>
+          <ul>
+            {% for x in playlists %}
+            <li class="playlist">
+              {{ x }}
+            </li>
+            {% endfor %}    
+          </ul>
+      </div>
+  </div>
+  <div class="rightpane contentContainer">
+    <div class="content">
+      <div class="topHeader">
+        <h2>Your Music</h2>
+      </div>
+      <div style="height:0; overflow:hidden;">
+        <form method='post' enctype="multipart/form-data">
+          <input type="file" class="songUploadInput" name="song" >
+          <input type="submit" class="submitSongAddition" value="submit"/>
+        </form>
+      </div>
+      <button type="file_" class="uploadBtn">Upload</button>
+    </div>
+    <ul>
+      {% for x in songs %}
+      <li class="song" id="{{ x['title'] }}" name="{{ x['url'] }}">
+        {{ x['title'] }}
+        <span class="artist">
+          by 
+          <span class="artistName">
+            {{ x['artist'] }}
+          </span>
+        </span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  </div>
+  </div>
+  <div class="player">
 	<div class="leftpane leftControlsContainer">
-		<div class="controls">
-			<button class="backwards" type="button"></button>
-			<button class="playPause" onclick="playPause()" name="play" type="button"></button>
-			<button class="forwards" type="button"></button>
-		</div>
-	</div>
-	<div class="rightpane">
-		<div class="songPlayingInfo">
-            <h3 class="playingSong">{{ first['title'] }}</h3>
-            <h5 class="playingArtist">{{ first['artist'] }}</h5>
-		</div>
-		<button class="sound" type="button"></button>
-		<div class="soundDropup">
-			<input value="50" type="range" min="0" max="100" class="volumizer"/>
-		</div>
-	</div>
-</div>
-
-
-<!-- Upload popup, until next time bud, you're gorgeous, don't worry about what others think. You're amazing and may never be used again. Ok I'll stop this comment now.
+      <div class="controls">
+        <button class="backwards" type="button">
+        </button>
+        <button class="playPause" onclick="playPause()" name="play" type="button">
+        </button>
+        <button class="forwards" type="button">
+        </button>
+      </div>
+  </div>
+  <div class="rightpane">
+    <div class="songPlayingInfo">
+      <h3 class="playingSong">
+        {{ first['title'] }}
+      </h3>
+      <h5 class="playingArtist">
+        {{ first['artist'] }}
+      </h5>
+    </div>
+    <button class="sound" type="button">
+    </button>
+    <div class="soundDropup">
+      <input value="50" type="range" min="0" max="100" class="volumizer"/>
+    </div>
+  </div>
+  </div>
+  
+  
+  <!-- Upload popup, until next time bud, you're gorgeous, don't worry about what others think. You're amazing and may never be used again. Ok I'll stop this comment now.
 <div class="uploadPopup">
-	<div class="uploadPopupWindow">
-		<h2>Upload</h2>
-	</div>
+<div class="uploadPopupWindow">
+<h2>
+Upload
+</h2>
+</div>
 </div>
 -->
-
-<script src="../static/js/js.js"></script>
+  
+  <script src="../static/js/js.js">
+  </script>
 </body>
 </html>
