@@ -26,11 +26,16 @@
 		<div class="content">
 			<div class="topHeader">
 				<h2>Your Music</h2>
-				<div style="height:0; overflow:hidden;">
-                    <form method='post'><input type="file" class="songUploadInput" name="song_upload"></form>
+                <!--<div style="height:0; overflow:hidden;">-->
+                <div>
+                    <form method='post' enctype="multipart/form-data">
+                        <input type="file" class="songUploadInput" name="song" >
+                        <br/>
+                        <input type="submit" value="submit"/>
+                    </form>
 
 				</div>
-				<button type="file" class="uploadBtn">Upload</button>
+				<button type="file_" class="uploadBtn">Upload</button>
 			</div>
             <ul>
                 {% for x in songs %}

@@ -1,0 +1,306 @@
+body {
+	font-family: "Roboto", "Helvetica Neue", sans-serif;
+	margin: 0;
+	padding: 0;
+}
+div {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.container {
+	width: 100%;
+	height: 100%;
+	padding-bottom: 80px;
+	position: relative;
+}
+.leftpane {
+	width: 200px;
+	display: inline-block;
+	position: relative;
+	z-index: 10;
+}
+.rightpane {
+	width: 100%;
+	position:absolute;
+	padding-left: 200px;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	display: inline-block;
+}
+.sidebar {
+	background: #1d1d1d;
+	height: 100%;
+	border-right:1px solid #303030;
+}
+.sidebarContainer {
+	height: 100%;
+}
+ul {
+	padding: 0;
+	margin: 0;
+}
+.sidebar ul .playlist, .content ul .song {
+	height: 50px;
+	line-height: 50px;
+	font-weight: normal;
+	padding: 0 20px;
+}
+.content ul .song {
+	color: white;
+	border-bottom: 1px solid rgba(255,255,255,.05);
+}
+.content ul .song .artist {
+	color: rgba(255,255,255,.5);
+	font-weight: 200;
+	font-style: italic;
+	margin-left: 10px;
+}
+.sidebar ul .playlist {
+	color: #bbbbbb;
+	border-bottom: 1px solid #222;
+}
+.sidebar ul .playlist:hover {
+	color: white;
+	background: rgba(0,0,0,.2);
+	cursor: pointer;
+}
+.content {
+	height: 100%;
+	background: #232323;
+}
+.contentContainer {
+	height: 100%;
+	padding-bottom: 80px;
+}
+.topHeader h2 {
+	margin: 0;
+	color: white;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 80px;
+}
+.topHeader {
+	height: 80px;
+	padding: 0 20px;
+	border-bottom: 1px solid #303030;
+}
+.uploadBtn {
+	position: absolute;
+	top:20px;
+	right: 20px;
+	height: 40px;
+	width: 100px;
+	text-align: center;
+	border: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	border-radius: 3px;
+	background-color: #00f327;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 243, 39)), to(rgb(0, 171, 21)));
+	background-image: -webkit-linear-gradient(top, rgb(0, 243, 39), rgb(0, 171, 21));
+	background-image: -moz-linear-gradient(top, rgb(0, 243, 39), rgb(0, 171, 21));
+	background-image: -o-linear-gradient(top, rgb(0, 243, 39), rgb(0, 171, 21));
+	background-image: -ms-linear-gradient(top, rgb(0, 243, 39), rgb(0, 171, 21));
+	background-image: linear-gradient(top, rgb(0, 243, 39), rgb(0, 171, 21));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#00f327', EndColorStr='#00ab15');
+	box-shadow: inset 0 1px #94ff9f, 0 1px rgba(0,0,0,.25);
+	font-size: 14px;
+	font-weight: bold;
+	text-shadow: 0 -1px rgba(0,0,0,.35);
+	color: white;
+	z-index: 9999;
+}
+.uploadBtn:hover {
+	background-color: #00f32d;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 243, 45)), to(rgb(0, 196, 22)));
+	background-image: -webkit-linear-gradient(top, rgb(0, 243, 45), rgb(0, 196, 22));
+	background-image: -moz-linear-gradient(top, rgb(0, 243, 45), rgb(0, 196, 22));
+	background-image: -o-linear-gradient(top, rgb(0, 243, 45), rgb(0, 196, 22));
+	background-image: -ms-linear-gradient(top, rgb(0, 243, 45), rgb(0, 196, 22));
+	background-image: linear-gradient(top, rgb(0, 243, 45), rgb(0, 196, 22));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#00f32d', EndColorStr='#00c416');
+	cursor: pointer;
+}
+.uploadBtn:focus {
+	outline: none;
+}
+.uploadBtn:active {
+	background-color: #00c416;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 196, 22)), to(rgb(0, 243, 45)));
+	background-image: -webkit-linear-gradient(top, rgb(0, 196, 22), rgb(0, 243, 45));
+	background-image: -moz-linear-gradient(top, rgb(0, 196, 22), rgb(0, 243, 45));
+	background-image: -o-linear-gradient(top, rgb(0, 196, 22), rgb(0, 243, 45));
+	background-image: -ms-linear-gradient(top, rgb(0, 196, 22), rgb(0, 243, 45));
+	background-image: linear-gradient(top, rgb(0, 196, 22), rgb(0, 243, 45));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#00c416', EndColorStr='#00f32d');
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
+	outline: none;
+}
+.player {
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	bottom:0;
+	background-color: #009cff;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 156, 255)), to(rgb(0, 135, 255)));
+	background-image: -webkit-linear-gradient(top, rgb(0, 156, 255), rgb(0, 135, 255));
+	background-image: -moz-linear-gradient(top, rgb(0, 156, 255), rgb(0, 135, 255));
+	background-image: -o-linear-gradient(top, rgb(0, 156, 255), rgb(0, 135, 255));
+	background-image: -ms-linear-gradient(top, rgb(0, 156, 255), rgb(0, 135, 255));
+	background-image: linear-gradient(top, rgb(0, 156, 255), rgb(0, 135, 255));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#009cff', EndColorStr='#0087ff');
+	box-shadow: inset 0 1px #00baff, 0 -2px 3px rgba(0,0,0,.1);
+	z-index: 9997;
+}
+.player .leftControlsContainer {
+	padding: 29px 20px;
+	height: 80px;
+	position: relative;
+}
+.player button {
+	border: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	position: absolute;
+}
+.player .leftControlsContainer .forwards, .player .leftControlsContainer .backwards {
+	background: url("img/backwardsForwards.png") no-repeat;
+	width: 24px;
+	height: 17px;
+	margin: 3px 0;
+}
+.player .leftControlsContainer .forwards {
+	right: 20px;
+	background-position: center bottom;
+}
+.player .leftControlsContainer .backwards {
+	left: 20px;
+	background-position: center top;
+}
+.player .leftControlsContainer .playPause {
+	width: 20px;
+	height: 23px;
+	background: url("img/playPause.png") no-repeat;
+	background-position: center top;
+	left: 50%;
+	margin-left: -10px;
+}
+.player button:active, .player button:focus {
+	outline: none;
+}
+.player button:hover {
+	cursor: pointer;
+}
+.player .songPlayingInfo {
+	padding: 20px 80px 20px 20px;
+}
+.player .songPlayingInfo .playingSong {
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	text-shadow: 0 1px rgba(0,0,0,.25);
+}
+.player .songPlayingInfo .playingArtist {
+	margin: 0;
+	padding: 0;
+	color: #a5daff;
+	text-shadow: 0 1px rgba(0,0,0,.25);
+	font-weight: normal;
+	font-size: 12px;
+}
+.sound {
+	position: absolute;
+	top:28px;
+	right: 20px;
+	width: 24px;
+	height: 25px;
+	background: url("img/sound.png") no-repeat;
+	background-position: center center;
+	border: none;
+}
+.audiofile {
+	display: none;
+}
+.soundDropup {
+	display: none;
+	position: absolute;
+	bottom: 70px;
+	right: 10px;
+	width: 54px;
+	background: white;
+	border-radius: 3px;
+	box-shadow: 0 0 0 1px rgba(0,0,0,.2), 0 1px 1px rgba(0,0,0,.05);
+	padding: 40px 0;
+}
+.volumizer {
+	-webkit-appearance: slider-vertical;
+	height: 125px;
+	width: 15px;
+	margin: 0 auto;
+	
+}
+.volumizer::slider-thumb, .volumizer::-webkit-slider-thumb {
+	width: 20px;
+	height: 20px;
+	background: #ccc;
+	border-radius:50%;
+}
+.song:hover {
+	cursor: pointer;
+	background: rgba(255,255,255,.02);
+}
+.uploadPopup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: rgba(0,0,0,.6);
+	box-shadow: inset 0 0 100px rgba(0,0,0,.2);
+	z-index: 9998;
+	display: none;
+	opacity: 0;
+}
+.uploadPopup .uploadPopupWindow {
+	width: 500px;
+	height: 500px;
+	top: 50%;
+	-webkit-transition:0.4s all;
+	-moz-transition:0.4s all;
+	-o-transition:0.4s all;
+	transition:0.4s all;
+	margin: -280px auto 0 -250px;
+	opacity: 0.8;
+	background: white;
+	border-radius:3px;
+	position: relative;
+	left: 50%;
+	overflow: hidden;
+	box-shadow: 0 0 0 1px rgba(0,0,0,.5), 0 2px 3px rgba(0,0,0,.5);
+}
+.uploadPopup .uploadPopupWindow h2 {
+	margin: 0;
+	line-height: 50px;
+	height: 50px;
+	text-align: center;
+	background-color: #fefefe;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(254, 254, 254)), to(rgb(249, 249, 249)));
+	background-image: -webkit-linear-gradient(top, rgb(254, 254, 254), rgb(249, 249, 249));
+	background-image: -moz-linear-gradient(top, rgb(254, 254, 254), rgb(249, 249, 249));
+	background-image: -o-linear-gradient(top, rgb(254, 254, 254), rgb(249, 249, 249));
+	background-image: -ms-linear-gradient(top, rgb(254, 254, 254), rgb(249, 249, 249));
+	background-image: linear-gradient(top, rgb(254, 254, 254), rgb(249, 249, 249));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#fefefe', EndColorStr='#f9f9f9');
+	box-shadow: inset 0 1px white, 0 1px 1px rgba(0,0,0,.05);
+	font-weight: 200;
+	border-bottom: 1px solid #ccc;
+	text-shadow: 0 1px rgba(255,255,255,.25);
+	font-size: 20px;
+}
