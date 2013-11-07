@@ -21,13 +21,15 @@
               Playlists
             </h2>
           </div>
-          <ul>
-            {% for x in playlists %}
-            <li class="playlist">
-              {{ x }}
-            </li>
-            {% endfor %}    
-          </ul>
+          <div class="contentScroll">
+	          <ul>
+	            {% for x in playlists %}
+	            <li class="playlist">
+	              {{ x }}
+	            </li>
+	            {% endfor %}    
+	          </ul>
+          </div>
       </div>
   </div>
   <div class="rightpane contentContainer">
