@@ -1,7 +1,7 @@
 About
 =====
 
-Melody is an easier way to organize, and listen to your music from your web browser.
+Melody is an easier way to organize, and listen to your music from your web browser without relying on a 3rd party.
 
 Melody is still in very early development, there isn't much yet but uploading and playing music.
 
