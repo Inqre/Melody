@@ -71,7 +71,7 @@ ul {
 	height: 100%;
 	background: #232323;
 }
-.content ul {
+.content .contentScroll {
 	overflow:scroll;
 }
 .contentContainer {
