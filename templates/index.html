@@ -25,7 +25,7 @@
 
       </script>
     <!-- Audio file under me -->
-    <audio class="audioFile" {{ autoplay['autoplay'] }} reload="auto" src="../static/songs/7f9dc188b63f49ab9d7801cf18ebf62d.mp3" onended="goNext(true)">
+    <audio class="audioFile" {{ autoplay['autoplay'] }} reload="auto" src="{{ first['url'] }}" onended="goNext(true);">
     </audio>
     <!-- end of audio file -->
     <div class="container">
@@ -193,10 +193,10 @@
   <div class="rightpane">
     <div class="songPlayingInfo">
       <h3 class="playingSong">
-        What&#39;s My Age Again?
+          {{ first['title'] }}
       </h3>
       <h5 class="playingArtist">
-        blink-182
+          {{ first['artist'] }}
       </h5>
     </div>
     <button class="sound" type="button">
