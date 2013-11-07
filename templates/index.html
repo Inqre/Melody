@@ -54,10 +54,12 @@
       </div>
       <button type="file_" class="uploadBtn">Upload</button>
       <ul>
+        {% set on = 0 %}
         {% for x in songs %}
         <li class="song" id="{{ x['title'] }}" name="{{ x['url'] }}">
-          {{ x['title'] }} 
-          <span class="artist">
+        {{ on }} {{ x['title'] }} 
+        {% set on = on + 1 %}
+        <span class="artist">
             by 
         <span class="artistName">
              {{ x['artist'] }}
