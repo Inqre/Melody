@@ -8,4 +8,4 @@ app.debug = True
 app.register_blueprint(index)
 
 if __name__ == "__main__":
-    app.run()
+    app.run(port=5000)
