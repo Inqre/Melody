@@ -55,7 +55,7 @@
       <button type="file_" class="uploadBtn">Upload</button>
       <ul>
         {% for x in songs %}
-        <li class="song" id="Dumpweed" name="../static/songs/8f265f1e1d0d49aab798cb127fe59dd8.mp3">
+        <li class="song" id="{{ x['title'] }}" name="{{ x['url'] }}">
           {{ x['title'] }} 
           <span class="artist">
             by 
