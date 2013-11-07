@@ -1,3 +1,4 @@
+
 function playPause() {
 	if ($(".playPause").attr("name") == "play") {
 		$(".playPause").css("background-position", "center bottom");
