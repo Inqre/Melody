@@ -7,12 +7,11 @@ Install
 =======
 
 In order to run Melody you need:
-    * Python 2.7
-    * The Flask web framework
+
+* Python 2.7
+* The Flask web framework
 
 Once those two dependencies are installed simply run melody.py
-
-    python melody.py
 
 What is Melody?
 ===============
