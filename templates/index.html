@@ -1,3 +1,4 @@
+
 <html>
   <head>
     <title>
@@ -9,8 +10,22 @@
     <link href="../static/style.css" type="text/css" rel="stylesheet" />
   </head>
   <body>
+      <script>
+          function goNext(frontBack) {
+              var page = {{ page }};
+              if (frontBack) {
+                page = page + 1;
+                window.location = "/?song="+page;
+            }
+            else {
+              page = page - 1;
+              window.location = "/?song="+page;
+            }
+          }
+
+      </script>
     <!-- Audio file under me -->
-    <audio class="audioFile" preload="auto" src="{{ first['url'] }}">
+    <audio class="audioFile" {{ autoplay['autoplay'] }} reload="auto" src="../static/songs/7f9dc188b63f49ab9d7801cf18ebf62d.mp3" onended="goNext(true)">
     </audio>
     <!-- end of audio file -->
     <div class="container">
@@ -21,15 +36,9 @@
               Playlists
             </h2>
           </div>
-          <div class="contentScroll">
-	          <ul>
-	            {% for x in playlists %}
-	            <li class="playlist">
-	              {{ x }}
-	            </li>
-	            {% endfor %}    
-	          </ul>
-          </div>
+          <ul>
+                
+          </ul>
       </div>
   </div>
   <div class="rightpane contentContainer">
@@ -45,17 +54,127 @@
       </div>
       <button type="file_" class="uploadBtn">Upload</button>
       <ul>
-        {% for x in songs %}
-        <li class="song" id="{{ x['title'] }}" name="{{ x['url'] }}">
-          {{ x['title'] }}
+        
+        <li class="song" id="Dumpweed" name="../static/songs/8f265f1e1d0d49aab798cb127fe59dd8.mp3">
+          Dumpweed
           <span class="artist">
             by 
-            <span class="artistName">
-              {{ x['artist'] }}
+        <span class="artistName">
+              blink-182
             </span>
           </span>
         </li>
-        {% endfor %}
+        
+        <li class="song" id="Don&#39;t Leave Me" name="../static/songs/c7d3172e7fc34835818a7a55efcf81b8.mp3">
+          Don&#39;t Leave Me
+          <span class="artist">
+            by 
+        <span class="artistName">
+              blink-182
+            </span>
+          </span>
+        </li>
+        
+        <li class="song" id="Aliens Exist" name="../static/songs/1b06d2f2fced49a480c1e95998916b8b.mp3">
+          Aliens Exist
+          <span class="artist">
+            by 
+        <span class="artistName">
+              blink-182
+            </span>
+          </span>
+        </li>
+        
+        <li class="song" id="Going Away to College" name="../static/songs/c956173c816540a69a91e2bbffc0cb95.mp3">
+          Going Away to College
+          <span class="artist">
+            by 
+        <span class="artistName">
+              blink-182
+            </span>
+          </span>
+        </li>
+        
+        <li class="song" id="What&#39;s My Age Again?" name="../static/songs/7f9dc188b63f49ab9d7801cf18ebf62d.mp3">
+          What&#39;s My Age Again?
+          <span class="artist">
+            by 
+        <span class="artistName">
+              blink-182
+            </span>
+          </span>
+        </li>
+        
+        <li class="song" id="Dysentery Gary" name="../static/songs/767c6cb7426c44bbb485edf7257844b1.mp3">
+          Dysentery Gary
+          <span class="artist">
+            by 
+        <span class="artistName">
+              blink-182
+            </span>
+          </span>
+        </li>
+        
+        <li class="song" id="Adam&#39;s Song" name="../static/songs/32dd618f9c11415aae9eaf8d0c7e7921.mp3">
+          Adam&#39;s Song
+          <span class="artist">
+            by 
+        <span class="artistName">
+              blink-182
+            </span>
+          </span>
+        </li>
+        
+        <li class="song" id="All the Small Things" name="../static/songs/3b870e51a0f94072965bfca22987470b.mp3">
+          All the Small Things
+          <span class="artist">
+            by 
+        <span class="artistName">
+              blink-182
+            </span>
+          </span>
+        </li>
+        
+        <li class="song" id="The Party Song" name="../static/songs/f84cd6f0b57c4ab09d54e5594906ba55.mp3">
+          The Party Song
+          <span class="artist">
+            by 
+        <span class="artistName">
+              blink-182
+            </span>
+          </span>
+        </li>
+        
+        <li class="song" id="Mutt" name="../static/songs/2fde71d314894bd79a3fdefc54b5a7a1.mp3">
+          Mutt
+          <span class="artist">
+            by 
+        <span class="artistName">
+              blink-182
+            </span>
+          </span>
+        </li>
+        
+        <li class="song" id="Wendy Clear" name="../static/songs/607b2ffcc5c642f998b876d46c1a793d.mp3">
+          Wendy Clear
+          <span class="artist">
+            by 
+        <span class="artistName">
+              blink-182
+            </span>
+          </span>
+        </li>
+        
+        <li class="song" id="Anthem" name="../static/songs/30c0826029e947e0a8db53c1dec3bee0.mp3">
+          Anthem
+          <span class="artist">
+            by 
+        <span class="artistName">
+              blink-182
+            </span>
+          </span>
+        </li>
+        
       </ul>
   </div>
   </div>
@@ -63,21 +182,21 @@
   <div class="player">
 	<div class="leftpane leftControlsContainer">
       <div class="controls">
-        <button class="backwards" type="button">
+        <button class="backwards" type="button" onclick="goNext(false)">
         </button>
         <button class="playPause" onclick="playPause()" name="play" type="button">
         </button>
-        <button class="forwards" type="button">
+        <button class="forwards" type="button" onclick="goNext(true)">
         </button>
       </div>
   </div>
   <div class="rightpane">
     <div class="songPlayingInfo">
       <h3 class="playingSong">
-        {{ first['title'] }}
+        What&#39;s My Age Again?
       </h3>
       <h5 class="playingArtist">
-        {{ first['artist'] }}
+        blink-182
       </h5>
     </div>
     <button class="sound" type="button">
@@ -100,6 +219,8 @@ Upload
 -->
   
   <script src="../static/js/js.js">
+  
   </script>
+
 </body>
 </html>
