@@ -23,6 +23,10 @@
             }
           }
 
+          $('audio').on('ended', function() {
+                 goNext(true);
+                });
+
       </script>
     <!-- Audio file under me -->
     <audio class="audioFile" {{ autoplay['autoplay'] }} reload="auto" src="{{ first['url'] }}" onended="goNext(true);">
